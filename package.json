@@ -4,12 +4,11 @@
   "description": "Repository for preperation immersive course.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:recursion": "jest recursion-review/",
-    "test:underbar": "jest underbar-review/",
-    "test:watch": "jest --watch",
-    "test:circleci": "jest --json --outputFile=.circleci/results.json",
-    "lint": "eslint **/*.js --quiet"
+    "test:koans": "mocha modern-js-koans/*.js --sort",
+    "test:ha": "mocha pre-hiring-assessment/**/index.test.js --sort",
+    "test": "mocha modern-js-koans/*.js pre-hiring-assessment/**/index.test.js --sort",
+    "lint": "eslint pre-hiring-assessment/**/*.js modern-js-koans/**/*.js",
+    "submit": "node .travis/submit.js"
   },
   "keywords": [
     "linter",
@@ -20,5 +19,10 @@
   "author": "codesatates",
   "dependencies": {},
   "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.7.0",
+    "jsdom": "^16.4.0",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3"
   }
 }

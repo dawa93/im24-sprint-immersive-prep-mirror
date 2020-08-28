@@ -8,7 +8,8 @@
     "test:ha": "mocha pre-hiring-assessment/**/index.test.js --sort",
     "test": "mocha modern-js-koans/*.js pre-hiring-assessment/**/index.test.js --sort",
     "lint": "eslint pre-hiring-assessment/**/*.js modern-js-koans/**/*.js",
-    "submit": "node .travis/submit.js"
+    "report": "mocha modern-js-koans/*.js pre-hiring-assessment/**/index.test.js --sort --reporter @mochajs/json-file-reporter",
+    "submit": "node ./.travis/submit.js"
   },
   "keywords": [
     "linter",
@@ -19,6 +20,7 @@
   "author": "codesatates",
   "dependencies": {},
   "devDependencies": {
+    "@mochajs/json-file-reporter": "^1.2.1",
     "chai": "^4.2.0",
     "jsdom": "^16.4.0",
     "mocha": "^8.1.1",

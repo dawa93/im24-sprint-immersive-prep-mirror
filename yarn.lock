@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@mochajs/json-file-reporter@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@mochajs/json-file-reporter/-/json-file-reporter-1.2.1.tgz#1d670362b1a417394b12ee133c217d98669c03e4"
+  integrity sha512-sZVlM28pYwn2d/0OWJCpegfLRsB//0kruLmnx+DbXTtqvMOkE5H2GuPbfgLZ8zpwkf1q3j2Mxp6Jj1FqFUBjlg==
+
 "@sinonjs/commons@^1", "@sinonjs/commons@^1.6.0", "@sinonjs/commons@^1.7.0", "@sinonjs/commons@^1.7.2":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.1.tgz#e7df00f98a203324f6dc7cc606cad9d4a8ab2217"

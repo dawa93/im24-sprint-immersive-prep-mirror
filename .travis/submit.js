@@ -1,5 +1,6 @@
 const { exec } = require("child_process");
 const https = require("https");
+const { readFileSync } = require("fs");
 const {
   URCLASS_URL,
   URCLASS_KEY,
@@ -15,27 +16,29 @@ if (TRAVIS_PULL_REQUEST_SLUG === "\n") {
   throw new Error("github username is missing");
 }
 
-exec("jest --json", (err, json, stderr) => {
-  const result = JSON.parse(json);
+exec("npm run report", (err, stdout, stderr) => {
+
+  let result = readFileSync('./report.json').toString()
+  result = JSON.parse(result)
   const username = TRAVIS_PULL_REQUEST_SLUG.split("/")[0];
 
   const options = {
     hostname: URCLASS_URL,
-    path: `/user_assessment/${ASSESSMENT_ID}`,
-    method: "POST",
+    path: `/production/submit/sprint`,
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      "x-api-key": URCLASS_KEY
-    }
+      'Content-Type': 'application/json',
+    },
   };
 
   console.log(JSON.stringify(options));
-  console.log(username);
   console.log(result);
 
   const body = {
-    isPassed: result.numTotalTests === result.numPassedTests,
-    githubUsername: username
+    assessment_id: ASSESSMENT_ID,
+    githubUsername: username,
+    type: 'mocha',
+    result: result,
   };
 
   makeRequest(options, body);

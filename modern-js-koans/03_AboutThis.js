@@ -41,26 +41,6 @@ describe('this 키워드에 관해서', () => {
   })
 
   it('메소드 호출시 this를 확인합니다', () => {
-    const counter = {
-      value: 0,
-      increse: function () {
-        this.value++
-      },
-      decrease: function () {
-        this.value--
-      },
-      getValue: function () {
-        return this.value
-      }
-    }
-
-    counter.increse()
-    counter.increse()
-    counter.decrease()
-    expect(counter.getValue()).to.eql(FILL_ME_IN)
-  })
-
-  it('메소드 호출시 this를 확인합니다', () => {
     // 객체의 속성 값으로 담긴 함수를 특별히 "메소드"라고 부릅니다
     // foo()     :함수
     // foo.bar() :메소드 함수

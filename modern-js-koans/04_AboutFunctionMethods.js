@@ -207,7 +207,7 @@ describe("bind의 유용한 예제를 확인합니다", () => {
     expect(callback.toString()).to.include("bind");
     expect(result).to.eql(["김코딩", "박해커", "최초보"]);
   });
-
+  //a
   it("setTimeout에 this 컨텍스트를 전달하기에 유용합니다", function() {
     const result = [];
     function pushCount() {

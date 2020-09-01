@@ -37,7 +37,7 @@ describe('this 키워드에 관해서', () => {
       return this
     }
 
-    expect(foo()).to.eql(global)
+    expect(foo()).to.eql(module.exports)
   })
 
   it('메소드 호출시 this를 확인합니다', () => {

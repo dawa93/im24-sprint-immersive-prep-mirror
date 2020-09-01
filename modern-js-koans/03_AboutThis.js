@@ -21,7 +21,7 @@ describe('this 키워드에 관해서', () => {
       return this
     }
 
-    expect(foo()).to.eql(FILL_ME_IN)
+    expect(foo()).to.eql(global)
   })
 
   it('함수 표현식 호출시 this값을 확인합니다', () => {
@@ -29,7 +29,7 @@ describe('this 키워드에 관해서', () => {
       return this
     }
 
-    expect(foo()).to.eql(FILL_ME_IN)
+    expect(foo()).to.eql(global)
   })
 
   it('화살표 함수 호출시 this값을 확인합니다', () => {
@@ -37,7 +37,7 @@ describe('this 키워드에 관해서', () => {
       return this
     }
 
-    expect(foo()).to.eql(FILL_ME_IN)
+    expect(foo()).to.eql(global)
   })
 
   it('메소드 호출시 this를 확인합니다', () => {

@@ -134,15 +134,15 @@ describe("bind에 관해서", () => {
     const context = "almost finish";
 
     const boundFoo = foo.bind(context);
-    expect(typeof boundFoo).to.eql(FILL_ME_IN);
-    expect(boundFoo()).to.eql(FILL_ME_IN);
+    expect(typeof boundFoo).to.eql('function');
+    expect(boundFoo()).to.eql("almost finish");
   });
 
   it("bind의 인자 순서는 call과 동일합니다", () => {
     const context = "bind";
 
     const boundFoo = foo.bind(context, " is", " useful");
-    expect(boundFoo()).to.eql(FILL_ME_IN);
+    expect(boundFoo()).to.eql("bind is useful");
   });
 });
 
@@ -198,11 +198,11 @@ describe("bind의 유용한 예제를 확인합니다", () => {
     }, 1000);
 
     clock.tick(1001); // 1초가 흘렀습니다
-    expect(result).to.eql(FILL_ME_IN);
+    expect(result).to.eql([1]);
 
     setTimeout(pushCount.bind(counter), 1000);
 
     clock.tick(1001); // 1초가 흘렀습니다
-    expect(result).to.eql(FILL_ME_IN);
+    expect(result).to.eql([1,2]);
   });
 });

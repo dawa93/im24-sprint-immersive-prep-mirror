@@ -8,7 +8,7 @@ describe('화살표 함수에 관해서', function () {
       return x + y
     }
 
-    expect(add(5, 8)).to.eql(FILL_ME_IN)
+    expect(add(5, 8)).to.eql(13)
   })
 
   it('화살표 함수 사용법을 익힙니다', function () {

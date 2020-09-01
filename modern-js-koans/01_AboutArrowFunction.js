@@ -38,19 +38,19 @@ describe("화살표 함수에 관해서", function() {
       };
     };
 
-    expect(adder(50)(10)).to.eql(FILL_ME_IN);
+    expect(adder(50)(10)).to.eql(60);
 
     const subtractor = x => y => {
       return x - y;
     };
 
-    expect(subtractor(50)(10)).to.eql(FILL_ME_IN);
+    expect(subtractor(50)(10)).to.eql(40);
 
     const htmlMaker = tag => textContent => `<${tag}>${textContent}</${tag}>`;
-    expect(htmlMaker("div")("code states")).to.eql(FILL_ME_IN);
+    expect(htmlMaker("div")("code states")).to.eql('<div>code states</div>');
 
     const liMaker = htmlMaker("li");
-    expect(liMaker("1st item")).to.eql(FILL_ME_IN);
-    expect(liMaker("2nd item")).to.eql(FILL_ME_IN);
+    expect(liMaker("1st item")).to.eql('<li>1st item</li>');
+    expect(liMaker("2nd item")).to.eql('<li>2nd item</li>');
   });
 });

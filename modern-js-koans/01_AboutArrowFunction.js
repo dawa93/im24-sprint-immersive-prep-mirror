@@ -27,6 +27,7 @@ describe("화살표 함수에 관해서", function() {
 
     // 파라미터가 하나일 경우 소괄호 생략이 가능합니다
     const divideBy10 = x => x / 10;
+
     expect(divideBy10(100)).to.eql(10);
   });
 

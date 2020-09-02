@@ -1,6 +1,6 @@
 function test1(str) {
   // TODO: 여기에 코드를 작성합니다.
-  let base = str.toLowerCase().split(' ');
+  let base = str.split(' ');
   let result = {};
   if(str.length === 0){
     return {}

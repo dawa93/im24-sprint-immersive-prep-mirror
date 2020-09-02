@@ -20,3 +20,5 @@ function test1(str) {
    return result
   }
 }
+
+test('ask a bunch try a bunch get a bunch');

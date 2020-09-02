@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const sinon = require("sinon");
-const FILL_ME_IN = "FILL_ME_IN";
+
 
 describe("함수 메소드에 관해서", () => {
   function foo() {

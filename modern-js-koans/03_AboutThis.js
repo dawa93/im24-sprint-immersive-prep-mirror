@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const FILL_ME_IN = "FILL_ME_IN";
+
 
 describe("this 키워드에 관해서", () => {
   // 브라우저 환경에서 this는 기본적으로 window 객체를 가리킵니다

@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const FILL_ME_IN = "FILL_ME_IN";
+
 
 describe("화살표 함수에 관해서", function() {
   it("함수 표현식 사용법을 복습합니다", function() {

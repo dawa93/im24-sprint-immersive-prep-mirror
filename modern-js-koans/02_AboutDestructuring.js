@@ -1,15 +1,15 @@
 const { expect } = require("chai");
-const FILL_ME_IN = "FILL_ME_IN";
+
 
 describe("구조 분해 할당(Destructing Assignment)에 관해서", () => {
   it("배열을 분해합니다", () => {
     const array = ["code", "states", "im", "course"];
 
-    const [first, second] = array;
+    let [first, second] = array;
     expect(first).to.eql("code");
     expect(second).to.eql("states");
 
-    const [first, second] = array;
+     [first, second] = array;
     expect(first).to.eql("code");
     expect(second).to.eql("states");
 

@@ -2,6 +2,13 @@
   "name": "immersive-prep",
   "version": "1.0.0",
   "description": "Repository for preperation immersive course.",
+  "eslintConfig": {
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha":true
+    }
+  },
   "main": "index.js",
   "scripts": {
     "test:koans": "mocha modern-js-koans/*.js --sort",
@@ -22,6 +29,7 @@
   "devDependencies": {
     "@mochajs/json-file-reporter": "^1.2.1",
     "chai": "^4.2.0",
+    "eslint": "^7.8.1",
     "jsdom": "^16.4.0",
     "mocha": "^8.1.1",
     "sinon": "^9.0.3"

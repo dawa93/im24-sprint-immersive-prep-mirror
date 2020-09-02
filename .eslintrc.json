@@ -1,37 +1,19 @@
 {
-<<<<<<< HEAD
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true,
-        "mocha" : true,
-        "node":true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 12
-    },
-    "rules": {
-        "semi": ["off", "always"],
-        "quotes": ["off", "double"],
-        "no-unused-vars":["off", "always"],
-        "no-prototype-builtins":["off","always"]
-    }
-=======
   "env": {
     "browser": true,
     "commonjs": true,
     "es2021": true,
-    "mocha": true
+    "mocha": true,
+    "node": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 12
   },
-
   "rules": {
-    "semi": ["error", "always"],
-    "quotes": ["error", "double"]
+    "semi": ["off", "always"],
+    "quotes": ["off", "double"],
+    "no-unused-vars": ["off", "always"],
+    "no-prototype-builtins": ["off", "always"]
   }
->>>>>>> 730c9bd5c85e3cc114a0d263a897065c78a37476
 }

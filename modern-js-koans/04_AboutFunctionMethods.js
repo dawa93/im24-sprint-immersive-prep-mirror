@@ -79,13 +79,13 @@ describe("apply에 관해서", () => {
     const developer = { type: "개발자", feature: "언어" };
     const artist = { type: "아티스트", feature: "노래" };
 
-    expect(printProfile.apply(developer, ['김코딩',30])).to.eql(
+    expect(printProfile.apply(developer, ["김코딩", 30])).to.eql(
       "개발자 김코딩 나이:30"
     );
-    expect(printProfile.apply(developer, ['박해커',20,'JavaScript'])).to.eql(
+    expect(printProfile.apply(developer, ["박해커", 20, "JavaScript"])).to.eql(
       "개발자 박해커 나이:20 언어:JavaScript"
     );
-    expect(printProfile.apply(artist, ['BTS',7,'ON','Dynamite'])).to.eql(
+    expect(printProfile.apply(artist, ["BTS", 7, "ON", "Dynamite"])).to.eql(
       "아티스트 BTS 나이:7 노래:ON,Dynamite"
     );
   });
@@ -97,17 +97,39 @@ describe("call, apply의 유용한 예제를 확인합니다", () => {
   const arrayNumbers = [5, 10, 4, 9];
 
   it("spread operator, rest parameter가 탄생하기 이전엔 apply가 많이 쓰였습니다", () => {
-    expect(array1.concat(array2)).to.eql(["code", "states","immersive", "course"]);
-    expect([...array1, ...array2]).to.eql(["code", "states","immersive", "course"]);
+    expect(array1.concat(array2)).to.eql([
+      "code",
+      "states",
+      "immersive",
+      "course"
+    ]);
+    expect([...array1, ...array2]).to.eql([
+      "code",
+      "states",
+      "immersive",
+      "course"
+    ]);
     expect(Math.max(...arrayNumbers)).to.eql(10);
     expect(Math.max.apply(null, arrayNumbers)).to.eql(10);
   });
 
   it("prototype의 기능을 빌려 쓸 수 있습니다", () => {
-    expect(Array.prototype.concat.call(array1, array2, arrayNumbers)).to.eql(
-      ["code", "states","immersive", "course",5, 10, 4, 9]
-    );
-    expect(Array.prototype.concat.apply(array1, [array2])).to.eql(["code", "states","immersive", "course"]);
+    expect(Array.prototype.concat.call(array1, array2, arrayNumbers)).to.eql([
+      "code",
+      "states",
+      "immersive",
+      "course",
+      5,
+      10,
+      4,
+      9
+    ]);
+    expect(Array.prototype.concat.apply(array1, [array2])).to.eql([
+      "code",
+      "states",
+      "immersive",
+      "course"
+    ]);
   });
 
   it("유사 배열을 다루기에 용이합니다", () => {
@@ -118,10 +140,12 @@ describe("call, apply의 유용한 예제를 확인합니다", () => {
       2: "span#new"
     };
 
-    expect(Array.prototype.slice.apply(nodeList, [0, 1])).to.eql(['div#target']);
+    expect(Array.prototype.slice.apply(nodeList, [0, 1])).to.eql([
+      "div#target"
+    ]);
     expect(
       Array.prototype.map.call(nodeList, node => node.split("#")[0])
-    ).to.eql(['div','li','span']);
+    ).to.eql(["div", "li", "span"]);
   });
 });
 
@@ -134,7 +158,7 @@ describe("bind에 관해서", () => {
     const context = "almost finish";
 
     const boundFoo = foo.bind(context);
-    expect(typeof boundFoo).to.eql('function');
+    expect(typeof boundFoo).to.eql("function");
     expect(boundFoo()).to.eql("almost finish");
   });
 
@@ -203,6 +227,6 @@ describe("bind의 유용한 예제를 확인합니다", () => {
     setTimeout(pushCount.bind(counter), 1000);
 
     clock.tick(1001); // 1초가 흘렀습니다
-    expect(result).to.eql([1,2]);
+    expect(result).to.eql([1, 2]);
   });
 });

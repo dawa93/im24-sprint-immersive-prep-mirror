@@ -9,6 +9,10 @@ describe("구조 분해 할당(Destructing Assignment)에 관해서", () => {
     expect(first).to.eql("code");
     expect(second).to.eql("states");
 
+    const [first, second] = array;
+    expect(first).to.eql("code");
+    expect(second).to.eql("states");
+
     const result = [];
     function foo([first, second]) {
       result.push(second);
